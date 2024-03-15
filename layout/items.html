@@ -1,0 +1,91 @@
+<div class="col sanpham-hangdau-container" >
+    <div class="danhmuc-sp-header">
+      <h4>
+        <span class="bi bi-star" style="color: rgb(226, 69, 21)">
+          TÌM KIẾM HÀNG ĐẦU</span
+        >
+      </h4>
+    </div>
+    
+      <div class="row col hangdau-goiy">
+        <ul class="row col float-start">
+          <li
+            class="col-2 openTab-register"
+            style="height: fit-content;"
+            ng-click="logMessage(sp)"
+            ng-repeat="sp in products|limitTo:12:begin"
+          >
+            <div class="card-hangdau-item" style="width: 18rem">
+              <span
+                class="img-like text-center text-white bi bi-heart-fill"
+              >
+                {{sp.likecount}} Yêu thích</span
+              >
+              <span
+                class="img-banchay text-center text-white bi bi-fire"
+                ng-if="sp.sale"
+              >
+                Sản phẩm bán chạy</span
+              >
+              
+              <img ng-src="images/{{sp.img}}" />
+  
+              <div class="card-body">
+                <p class="card-text">{{sp.title}}</p>
+                <div class="price">
+                  <span class="card-text icon-vnd">₫</span>
+                  <span class="price-item">{{sp.price}}.000</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+    <div class="row">
+      <nav
+        aria-label="Page navigation example te "
+        class="d-flex justify-content-center"
+      >
+        <ul class="pagination">
+          <li class="page-item">
+            <a
+              class="page-link"
+              style="cursor: pointer;"
+              aria-label="Previous"
+              ng-click="prev()"
+            >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" style="color: #fe6032">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link"  style="color: #fe6032">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" style="color: #fe6032">3</a>
+          </li>
+          <li class="page-item">
+            <a
+              class="page-link"
+              style="cursor: pointer;"
+
+              aria-label="Next"
+              ng-click="next()"
+            >
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="row">
+      <span class="text-center" style="margin-top: -10px"
+        >{{tranghientai}}/{{totalPages}}</span
+      >
+    </div>
+    <br />
+    <hr />
+  </div>

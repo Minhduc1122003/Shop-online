@@ -1,0 +1,209 @@
+<div class="row float-end">
+  <button
+    type="button"
+    class="btn-close btn-close-2 btn-close-white"
+    aria-label="Close"
+    id="closeTab-register"
+  ></button>
+</div>
+<div class="row gio-hang-heading gio-hang-heading-2 text-white">
+  <div class="container row col">
+    <div class="col-5 view-img mx-auto">
+      <span class="image-container-2">
+        <h2 class="text-center text-white">
+          <b>Bước cuối cùng...</b>
+        </h2>
+        <img src="images/illustration-astro.png" alt="" />
+      </span>
+    </div>
+
+    <div class="col-7 form-input-account float-end">
+      <legend style="color: #f5c103">
+        <b>Hoàn tất thông tin tài khoản của bạn</b>
+      </legend>
+      <hr />
+      <div class="col mb-3 text-white email-input-2">
+        <form class="row col g-3 needs-validation" novalidate>
+          <div class="col-6 float-start">
+            <div class="row-nguoidung has-validation">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+
+              <input
+                class="form-control form-input"
+                type="text"
+                id="email-output"
+                disabled
+                aria-describedby="inputGroupPrepend"
+              />
+              <div class="invalid-feedback">Vui lòng điền email trước.</div>
+            </div>
+            <div class="row-nguoidung has-validation">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Tên người dùng</label
+              >
+              <input
+                type="text"
+                class="form-control form-input"
+                id="name-focus"
+                placeholder="Tên người dùng"
+                value=""
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">Bạn chưa đặt tên người dùng</div>
+            </div>
+            <div class="nhapmk" style="margin-top: 10px">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Mật khẩu (8-16 ký tự)</label
+              >
+              <div class="input-group" style="width: 80%">
+                <input
+                  type="password"
+                  class="form-control  form-control2"
+                  placeholder="Mật khẩu"
+                  aria-label="Password"
+                  aria-describedby="basic-addon2"
+                  id="password-re"
+                  required
+                />
+                <a class="bi bi-eye-slash" id="basic-addon2" onclick="showPass_re('password-re','basic-addon2')"></a>
+                <div class="invalid-feedback">Bạn chưa đặt mật khẩu</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 float-end">
+            <div class="ngaysinh">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Ngày sinh</label
+              >
+              <div class="col list-input">
+                <div class="ngay-col">
+                  <input
+                    type="text"
+                    class="col-4 form-control form-date float-start"
+                    id="date-re"
+                    placeholder="Ngày"
+                    value=""
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  />
+                </div>
+
+                <div class="thang-col">
+                  <select
+                    class="form-select float-start form-date"
+                    style="min-width: 100px; margin-right: 20px"
+                    aria-label="Default select example"
+                    id="month-re"
+                    required
+                  >
+                    <option selected disabled value="">Tháng</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+                <div class="nam-col">
+                  <input
+                    type="text"
+                    class="col-4 form-control form-date float-start"
+                    id="year-re"
+                    placeholder="Năm"
+                    value=""
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col checkgioitinh float-start">
+              <div class="col minGT" style="width: 340px">
+                <div class="gioitinh">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Giới tính</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    id="gender-re"
+                    required
+                  >
+                    <option selected disabled value>Giới tính</option>
+                    <option value="true">Nam</option>
+                    <option value="false">Nữ</option>
+                  </select>
+                  <div class="invalid-feedback" style="margin-top: -1px">
+                    Chọn giới tính của bạn
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check d-flex justify-content-center">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label
+                class="form-check-label"
+                for="invalidCheck"
+                style="padding-left: 5px"
+              >
+                Đồng ý với các điều khoản dịch vụ của chúng tôi
+              </label>
+              <br />
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <a class="testhover" style="width: 90%;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            <button
+              class="btn btn-warning"
+              type="submit"
+              style="width: 100%; height: 50px"
+              id="btn-next-id"
+              ng-click="register()"
+              href="#!register"
+            >
+              Đăng ký
+            </button>
+            </a>
+          </div>
+        </form>
+        <div class="col-12 text-center" style="margin-top: 10px;">
+          <a class="testhover" style="width: 90%;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          <button
+            class="btn btn-outline-light btn-dang-ky"
+            style="width: 100%; ; height: 50px"
+          >
+            Đăng nhập
+          </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

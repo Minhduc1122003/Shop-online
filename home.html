@@ -1,0 +1,105 @@
+  <!-- tabpanel items -->
+  <div class="row">
+    <div
+      class="tab-pane-items"
+      id="tabPanel-items"
+      role="tabpanel"
+      style="background-color: white"
+    >
+      <div ng-include="'layout/chitietSP.html'"></div>
+    </div>
+  </div>
+
+  <!-- tabpanel giỏ hàng -->
+  <div class="container">
+    <div class="row">
+      <article class="col">
+        <!-- slide show -->
+        <div
+          id="carouselExampleDark"
+          class="carousel slide carousel-dark slideshow-container"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img
+                src="https://file.hstatic.net/200000722513/file/banner_web_slider_800x400_fc5e9a17fce54073a2e555f0c189b79d.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="https://file.hstatic.net/200000722513/file/pc_tet_-_slider_45be4c3cc88d4da2a6eb06459ba271c2.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://file.hstatic.net/200000722513/file/gearvn-mua-kem-pc-laptop-slider_f1a31ee0614d479d995b45fe48d06344.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <br />
+        <!-- danh mục -->
+        <div ng-include="'layout/danhmuc.html'"></div>
+        <br />
+
+        <div ng-include="'layout/items.html'"></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <footer class="row">
+      <div class="card text-center">
+        <div class="card-body">
+          <p>FPT Polytechnic &copy; 2024. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  </div>

@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="css/info-giohang.css" />
+<div class="container" style="margin-top: 70px; height: 100%">
+  <div class="row col">
+    <div class="table-title">
+      <table class="table">
+        <thead>
+          <tr class="text-center">
+            <th class="col-1">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="selectAll"
+                ng-click="selectAll()"
+              />
+            </th>
+            <th class="col-4">Thông tin sản phẩm</th>
+            <th class="col-2">Đơn giá</th>
+            <th class="col-2">Số lượng</th>
+            <th class="col-2">Thành tiền</th>
+            <th class="col-1 bi bi-trash"></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <table class="table table-hover table-item">
+      <tbody id="giohang-tbody">
+        <tr
+          ng-repeat="item in giohang_account"
+          style="background-color: #ff6433"
+        >
+          <td class="col-1 text-center">
+            <input
+              class="form-check-input select-item"
+              type="checkbox"
+              value=""
+              ng-click="select($index)"
+            />
+          </td>
+          <td class="col-4 align-middle">
+            <img class="float-start" ng-src="images/{{item.img_items}}" />
+            <div style="text-align: left; overflow-wrap: break-word">
+              <div class="title" style="margin-left: 170px">
+                {{item.title_items}}
+              </div>
+            </div>
+          </td>
+
+          <td class="dongia-giohang col-2">
+            <span style="color: #ff6433"
+              >{{item.price_items | myCurrency}}</span
+            >
+          </td>
+          <td class="col-2" style="text-align: center">
+            <div class="so-luong">
+              <button
+                id="dash-btn"
+                class="text-dark bi bi-dash"
+                style="
+                  border: 1px solid gray;
+                  background-color: white;
+                  margin: 0px;
+                "
+                ng-click="giamSL2($index)"
+              ></button>
+              <input
+                id="count-input"
+                class="count-giohang"
+                type="text"
+                value="{{item.count_items}}"
+                style="width: 50px; text-align: center;"
+              />
+
+              <button
+                id="plus-btn"
+                class="text-dark bi bi-plus"
+                style="border: 1px solid gray; background-color: white"
+                ng-click="tangSL2($index)"
+              ></button>
+            </div>
+            <!-- <div class="soluong-giohang d-inline-block">
+              <a
+                class="text-dark bi bi-dash-square giam-soluong"
+                style="width: 20px"
+                ng-click="giamSL2($index)"
+              ></a
+              ><span class="count-giohang">{{item.count_items}}</span
+              ><a
+                class="text-dark bi bi-plus-square tang-soluong"
+                ng-click="tangSL2($index)"
+              ></a>
+            </div> -->
+          </td>
+          <td class="dongia-giohang thanhtien-giohang col-2">
+            <span style="color: #ff6433"
+              >{{item.sum_price_items | myCurrency}}</span
+            >
+          </td>
+
+          <td class="col-1" style="text-align: center">
+            <a
+              class="bi bi-trash trash-giohang"
+              style="color: red"
+              ng-click="delete2($index)"
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row col table-title2">
+    <div class="thanhtoan" style="height: 100px; border: solid 1px orangered">
+      <table class="table table-item">
+        <tbody id="giohang-tbody">
+          <tr>
+            <td class="col-2 text-center">
+              <input
+                class="form-check-input ju"
+                type="checkbox"
+                value=""
+                id="selectAll2"
+                ng-click="selectAll2()"
+              />
+              <span>Chọn tất cả ({{itemCount}})</span>
+            </td>
+            <td class="col-8" style="align-items: end">
+              <span
+                >Tổng tiền thanh toán:
+                <b style="color: #ff6433">{{tongtien | myCurrency}}</b></span
+              >
+            </td>
+            <td class="col-2 text-center">
+              <a class="testhover">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <button
+                  class="btn btn-outline-warning"
+                  style="
+                    width: 100%;
+                    font-size: 15px;
+                    background-color: #ff6433;
+                    color: white !important;
+                    height: 100%;
+                    border-radius: 0px !important;
+                    border: 1px solid white !important;
+                  "
+                  ng-click="searchByKeyWork()"
+                >
+                  THANH TOÁN
+                </button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

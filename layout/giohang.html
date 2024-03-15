@@ -1,0 +1,71 @@
+<div class="row float-end">
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    id="closeTab-giohang"
+  ></button>
+</div>
+<div class="row gio-hang-heading">
+  <legend>Giỏ hàng tổng quát</legend>
+</div>
+
+<table class="table">
+  <thead>
+    <tr class="text-center">
+      <th scope="col" style="width: 375px">Thông tin sản phẩm</th>
+      <th scope="col" style="width: 150px">Đơn giá</th>
+      <th scope="col" style="width: 130px">Số lượng</th>
+      <th scope="col" class="bi bi-trash"></th>
+    </tr>
+  </thead>
+</table>
+<div class="table-container">
+  <table class="table table-hover table-item">
+    <tbody id="giohang-tbody">
+      <tr ng-repeat="item in giohang_account">
+        <td><img ng-src="images/{{item.img_items}}" /></td>
+        <td class="title-giohang">{{item.title_items}}</td>
+        <td class="dongia-giohang">{{item.price_items}}.000</td>
+        <td>
+          <div class="soluong-giohang">
+            <a
+              class="text-dark bi bi-dash-square giam-soluong"
+              style="width: 20px"
+              ng-click="giamSL($index)"
+            ></a
+            ><span class="count-giohang">{{item.count_items}}</span
+            ><a
+              class="text-dark bi bi-plus-square tang-soluong"
+              ng-click="tangSL($index)"
+            ></a>
+          </div>
+        </td>
+        <td>
+          <a
+            class="text-dark bi bi-trash trash-giohang"
+            ng-click="delete($index)"
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="row" style="float: right; height: fit-content;">
+  <div class="div" style="width: 100% !important">
+    <a class="testhover">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    <button
+      id="them-giohang"
+      class=" bi bi-cart add-giohang btn-xemct"
+      ng-click="chiTietGH()"
+    >
+      XEM CHI TIẾT
+    </button>
+    </a>
+  </div>
+  
+</div>

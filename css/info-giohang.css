@@ -1,0 +1,17 @@
+.table-title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 58px;
+    background-color: white;
+    z-index: 100;
+}
+.table-title2 {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0px;
+    background-color: white;
+    z-index: 1000;
+}
+.selected-row {
+    background-color: orangered !important; /* Màu nền của hàng được chọn */
+}

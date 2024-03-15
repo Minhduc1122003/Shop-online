@@ -1,0 +1,250 @@
+<div class="row" style="margin: 10px; height: 100%; max-height: 100%">
+  <h5>THÔNG TIN CÁ NHÂN</h5>
+  <span style="margin-top: -5px"
+    >Quản lý thông tin để bảo mật tài khoản của bạn</span
+  >
+  <hr />
+  <span style="color: gray">id: {{user.id}}</span>
+  <div class="row">
+    <div class="row col-8 float-start" style="padding: 10px; margin: 10px">
+      <div class="divcontainer" style="margin-left: 5%">
+        <div class="row g-2" style="width: 100%">
+          <div class="col-auto" style="margin-right: 10px">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: right"
+              >Tên người dùng:</label
+            >
+          </div>
+          <div class="col-auto">
+            <input
+              type="text"
+              id="inputName"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+              style="width: 300px"
+              value="{{user.name}}"
+            />
+          </div>
+        </div>
+        <div class="row g-2" style="width: 100%; padding-top: 20px">
+          <div class="col-auto" style="margin-right: 10px">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: right"
+              >Email:</label
+            >
+          </div>
+          <div class="col-auto">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: left; width: 300px"
+              >{{email_hidden.email_hidden2}}</label
+            >
+          </div>
+          <div class="col-auto">
+            <a class="testhover">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+                class="btn btn-outline-warning"
+                style="
+                  width: 100%;
+                  font-size: 15px;
+                  color: white !important;
+                  height: 100%;
+                  border-radius: 0px !important;
+                  border: 1px solid white !important;
+                  background-color: orangered;
+                "
+              >
+                Thay đổi
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="row g-2" style="width: 100%; padding-top: 20px">
+          <div class="col-auto" style="margin-right: 10px">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: right"
+              >Số điện thoại:</label
+            >
+          </div>
+          <div class="col-auto">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: left; width: 300px"
+              >{{user.phone}}</label
+            >
+          </div>
+          <div class="col-auto">
+            <a href="#" id="passwordHelpInline" class="form-text"> Thay Đổi </a>
+          </div>
+        </div>
+        <div class="row g-2" style="width: 100%; padding-top: 20px">
+          <div class="col-auto" style="margin-right: 10px">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: right"
+              >Giới tính:</label
+            >
+          </div>
+          <div class="col-auto" style="padding-top: 10px">
+            <div class="form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="option1"
+                checked
+              />
+              <label class="form-check-label" for="exampleRadios1"> Nam </label>
+            </div>
+            <div class="form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios2"
+                value="option2"
+              />
+              <label class="form-check-label" for="exampleRadios2"> Nữ </label>
+            </div>
+            <div class="form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios2"
+                value="option2"
+              />
+              <label class="form-check-label" for="exampleRadios2">
+                Khác
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2" style="width: 100%; padding-top: 20px">
+          <div class="col-auto" style="margin-right: 10px">
+            <label
+              class="col-form-label"
+              style="width: 130px; text-align: right"
+              >Ngày sinh:</label
+            >
+          </div>
+          <div class="col-auto">
+            <input
+              type="text"
+              id="inputName"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+              style="width: 100px"
+              placeholder="Ngày"
+              value="{{birthday.dd}}"
+            />
+          </div>
+          <div class="col-auto">
+            <select
+              class="form-select float-start form-date"
+              style="min-width: 100px; margin-right: 20px"
+              aria-label="Default select example"
+              id="month-re"
+              ng-model="birthday.mm"
+              required
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-auto">
+            <input
+              type="text"
+              id="inputName"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+              style="width: 100px"
+              placeholder="Năm"
+              value="{{birthday.yyyy}}"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <ul
+        class="nav-list align-items-center"
+        style="width: 100%; padding-top: 20px"
+      >
+        <li class="nav-item-list align-items-center">
+          <a class="testhover-white" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button
+              style="
+                background-color: orangered;
+                text-align: center;
+                padding-left: 0px;
+              "
+            >
+              <i class="bi bi-cloud-arrow-up"></i>
+              <b>Lưu</b>
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="row col-4 float-end" style="border-left: 1px solid gray">
+      <div class="text-center">
+        <h5 style="padding: 10px; margin: 10px">Tùy chọn ảnh đại diện</h5>
+        <img
+          ng-src="images/{{user.img}}"
+          alt=""
+          style="width: 170px; height: 170px; text-align: center"
+        />
+        <ul class="nav-list align-items-center" style="width: 100%">
+          <li class="nav-item-list align-items-center">
+            <a class="testhover-white" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button
+                style="
+                  background-color: orangered;
+                  text-align: center;
+                  padding-left: 0px !important;
+                  margin-left: -30px;
+                  color: black;
+                  width: 90%;
+                "
+              >
+                <b>Chọn tệp</b>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div" ng-include="'layout/modal-option.html'"></div>
+            <ng-view2></ng-view2>
+</div>

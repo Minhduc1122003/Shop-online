@@ -1,0 +1,141 @@
+
+<div
+  class="modal fade"
+  id="exampleModalToggle"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1
+          class="modal-title fs-5 bi bi-info-circle"
+          id="exampleModalToggleLabel"
+        >
+          Thông báo
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <span
+            >Để xác minh danh tính, chúng tôi cần xác nhận đó là bạn bằng cách
+            nhập email của bạn tại đây!</span
+          >
+          <br />
+          <br />
+          <label for="recipient-name" class="col-form-label float-start"
+            >Email:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            style="margin-left: 70px !important"
+            id="email-check"
+          />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a class="testhover">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button
+          ng-click="checkEmail()"
+            class="btn btn-outline-warning"
+            style="
+              width: 100%;
+              font-size: 15px;
+              color: white !important;
+              height: 100%;
+              border-radius: 0px !important;
+              border: 1px solid white !important;
+              background-color: orangered;
+            "
+          >
+            Tiếp tục
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="exampleModalToggle2"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 bi bi-check-lg" id="exampleModalToggleLabel2"> Xác minh danh tính</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+        <div class="modal-body">
+        <form>
+          <span
+            >Chúng tôi đã gửi một mã xác nhận đến địa chỉ email của bạn, điền vào đây mã xác nhận để xác minh danh tính!</span
+          >
+          <br />
+          <br />
+          <label for="recipient-name" class="col-form-label float-start"
+            >Mã xác nhận:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            style="margin-left: 100px !important"
+            id="recipient-name"
+          />
+        </form>
+      </div>
+      <div class="modal-footer">
+       <button
+          class="btn btn-primary"
+          data-bs-target="#exampleModalToggle"
+          data-bs-toggle="modal"
+        >
+          Quay lại
+        </button>
+        <a class="testhover">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button
+            data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal"
+            class="btn btn-outline-warning"
+            style="
+              width: 100%;
+              font-size: 15px;
+              color: white !important;
+              height: 100%;
+              border-radius: 0px !important;
+              border: 1px solid white !important;
+              background-color: orangered;
+            "
+          >
+            Tiếp tục
+          </button>
+        </a>
+        
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,173 @@
+<div class="row float-end" style="background-color: white">
+  <button
+    type="button"
+    class="btn-close btn-close-2 btn-close-dark"
+    aria-label="Close"
+    id="closeTab-chitieiSP"
+  ></button>
+</div>
+<div
+  class="row gio-hang-heading item-container text-white"
+  style="background-color: white"
+>
+  <div class="row col container-view-items">
+    <div class="col-4 view-img mx-auto">
+      <img src="" class="tabpanel-img" id="tabpanel-img-id" />
+    </div>
+
+    <div class="col-7 info-items float-end" style="background-color: white">
+      <div class="info-items-2">
+        <h4 class="tabpanel-title" id="tabpanel-title-id">title</h4>
+        <div class="danhgia float-start">
+          <button type="button">
+            <b
+              ><a href="#" style="color: #fe6032">5.0</a>
+              <span class="bi bi-star-fill"></span>
+              <span class="bi bi-star-fill"></span>
+              <span class="bi bi-star-fill"></span>
+              <span class="bi bi-star-fill"></span>
+
+              <span class="bi bi-star-fill"></span>
+            </b>
+          </button>
+          <button type="button">
+            <b><a href="#" class="text-dark">199</a> </b>Đánh giá
+          </button>
+          <span class="text-dark"> <b>200 </b>Đã bán </span>
+        </div>
+        <br />
+        <br />
+        <div class="row price-items float-start">
+          <span class="icon-vnd-tabpanel">₫</span
+          ><span class="tabpanel-price" id="tabpanel-price-id"> giá</span>
+        </div>
+        <div class="row sell-items float-start">
+          <ul class="list-unstyled">
+            <li class="title-li">
+              <span class="text-dark">Kích cỡ</span>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="free-size"
+                ng-click="checkSize('S')"
+                ng-class="{ 'checked': selectedSize === 'S' }"
+              >
+                <span>Size S</span
+                ><span
+                  ng-show="selectedSize === 'S'"
+                  class="check bi bi-check-lg"
+                ></span>
+              </button>
+              <button
+                type="button"
+                class="free-size"
+                ng-click="checkSize('M')"
+                ng-class="{ 'checked': selectedSize === 'M' }"
+              >
+                <span>Size M</span
+                ><span
+                  ng-show="selectedSize === 'M'"
+                  class="check bi bi-check-lg"
+                ></span>
+              </button>
+              <button
+                type="button"
+                class="free-size"
+                ng-click="checkSize('L')"
+                ng-class="{ 'checked': selectedSize === 'L' }"
+              >
+                <span>Size L</span
+                ><span
+                  ng-show="selectedSize === 'L'"
+                  class="check bi bi-check-lg"
+                ></span>
+              </button>
+              <button
+                type="button"
+                class="free-size"
+                ng-click="checkSize('XL')"
+              >
+                <span>Size XL</span
+                ><span ng-if="selectedSize == 'XL'" class="check bi bi-check-lg"
+                  >L</span
+                >
+              </button>
+            </li>
+          </ul>
+          <ul class="list-unstyled">
+            <li class="title-li">
+              <span class="text-dark">Số lượng</span>
+            </li>
+            <li>
+              <div class="so-luong">
+                <button
+                  id="dash-btn"
+                  class="text-dark bi bi-dash"
+                  style="
+                    border: 1px solid gray;
+                    background-color: white;
+                    margin: 0px;
+                  "
+                  onclick="giamSL()"
+                ></button>
+                <input
+                  id="count-input"
+                  class="text-center"
+                  type="text"
+                  value="1"
+                  style="width: 50px"
+                  oninput="validateNumberInput(this)"
+                />
+
+                <button
+                  id="plus-btn"
+                  class="text-dark bi bi-plus"
+                  style="border: 1px solid gray; background-color: white"
+                  onclick="tangSL()"
+                ></button>
+
+                <span style="color: gray"
+                  ><span class="text-dark" id="max-sp">100</span> sản phẩm có
+                  sẵn</span
+                >
+              </div>
+            </li>
+          </ul>
+          <ul class="list-unstyled">
+            <li>
+              <a class="testhover">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              <button
+                id="them-giohang"
+                class=" bi bi-cart-plus add-giohang"
+                ng-click="themgiohang()"
+              >
+                Thêm Vào Giỏ Hàng
+              </button>
+              </a>
+            </li>
+            <li>
+              <a class="testhover-white">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              <button
+                type="button"
+                id="muangay-btn"
+                class="bi bi-cash mua-ngay"
+              >
+                Mua Ngay
+              </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

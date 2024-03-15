@@ -1,0 +1,77 @@
+<aside class="col-6 aside-contents float-start">
+  
+    <h1 class="text-white text-center"><b>Đăng ký tài khoản mới</b></h1>
+    <div class="bocthe">
+      <div class="col mb-3 text-white email-input">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email của bạn</label
+        >
+        <input
+          type="text"
+          class="form-control form-email"
+          id="email-focus"
+          placeholder="Email@gmail.com"
+          ng-model="inputEmail"
+          />
+        <div class="none-feedback" style="margin-top: -1px">hello</div>
+      </div>
+      <br />
+
+      <div
+        class="form-check text-white checkbox-email"
+        style="margin-bottom: 0px !important; margin-top: -10px"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Nhận thông báo về khuyến mãi, thông báo, sự kiện...
+        </label>
+      </div>
+      <div class="row btn-next-container">
+        <div class="col text-center">
+          <button
+            type="button"
+            class="btn btn-warning btn-next"
+            id="openTab-register"
+            ng-click="scopeNext()"
+          >
+            Tiếp theo
+          </button>
+
+          <br />
+          <br />
+          <div class="col text-center">
+            <span class="text-white">Bạn cũng có thể tiếp tục với</span>
+            <br />
+            <br />
+            <div class="col btn-listbtn">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg bi bi-facebook"
+              ></button>
+              <button
+                type="button"
+                class="btn btn btn-light btn-lg bi bi-google"
+              ></button>
+              <button
+                type="button"
+                class="btn btn-success btn-lg bi bi-xbox"
+              ></button>
+            </div>
+
+            <hr class="text-white" />
+            <span class="text-white"
+              >Đã có tài khoản?
+              <a href="#!login" id="login-id" onclick="toggleAside()"
+                >Đăng nhập</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>

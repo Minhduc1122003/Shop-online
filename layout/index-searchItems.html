@@ -1,0 +1,287 @@
+<br />
+<br />
+<br />
+
+<div class="container" style="background-color: white">
+  <div
+    class="row col align-items-center"
+    style="background-color: rgb(226, 221, 221); padding: 10px"
+  >
+    <div class="div col-2 float-start">
+      <span style="width: fit-content">Sắp xếp theo</span>
+    </div>
+    <div
+      class="col-8 align-items-center"
+      style="margin-left: -60px !important; margin-top: 5px"
+    >
+      <a class="testhover-white">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button
+          type="button"
+          id="muangay-btn"
+          class="mua-ngay"
+          style="
+            width: fit-content;
+            font-size: 14px;
+            line-height: 30px;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+        >
+          Liên Quan
+        </button>
+      </a>
+      <a class="testhover" style="margin-left: 5px">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button
+          id="them-giohang"
+          class="add-giohang"
+          style="
+            width: fit-content;
+            font-size: 14px;
+            line-height: 30px;
+            color: black;
+            background-color: white;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+          ng-click="themgiohang()"
+        >
+          Mới Nhất
+        </button>
+      </a>
+      <a class="testhover" style="margin-left: 5px">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button
+          id="them-giohang"
+          class="add-giohang"
+          style="
+            width: fit-content;
+            font-size: 14px;
+            line-height: 30px;
+            color: black;
+            background-color: white;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+          ng-click="themgiohang()"
+        >
+          Bán Chạy
+        </button>
+      </a>
+      <a class="testhover" style="margin-left: 5px">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          style="
+            text-align: left;
+            font-size: 14px;
+            line-height: 30px;
+            color: black;
+            background-color: white;
+            border: none !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100px;
+            list-style: none;
+            text-decoration: none;
+            width: 150px;
+            line-height: 20px;
+            max-height: 30px;
+          "
+          id="selectedOption"
+          ng-click="sapXep()"
+        >
+          <option
+            selected
+            style="text-decoration: none; list-style: none"
+            disabled
+          >
+            Giá
+          </option>
+          <option value="1">Giá: giảm dần</option>
+          <option value="2">Giá: tăng dần</option>
+        </select>
+      </a>
+    </div>
+    <div
+      class="div col-2 float-end"
+      style="margin-left: 60px; display: flex; align-items: center"
+    >
+      <span style="width: fit-content; display: flex; align-items: center"
+        >{{tranghientai_find}}/{{totalPages_find}}</span
+      >
+      <a class="testhover" style="margin-left: 5px">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button
+          id="them-giohang"
+          class="add-giohang bi bi-caret-left"
+          style="
+            width: fit-content;
+            font-size: 14px;
+            line-height: 30px;
+            color: black;
+            background-color: white;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+          ng-click="prev_find()"
+        ></button>
+      </a>
+      <a class="testhover" style="margin-left: 5px">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button
+          class="add-giohang bi bi-caret-right"
+          style="
+            width: fit-content;
+            font-size: 14px;
+            line-height: 30px;
+            color: black;
+            background-color: white;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+          "
+          ng-click="next_find()"
+        ></button>
+      </a>
+    </div>
+  </div>
+  <div class="col sanpham-hangdau-container">
+    <div class="danhmuc-sp-header">
+      <h4>
+        <span class="bi bi-search" style="color: rgb(226, 69, 21)">
+          TÌM KIẾM THEO MỨC ĐỘ LIÊN QUAN</span
+        >
+        <br />
+      </h4>
+    </div>
+    <!-- hiển thị bình thường -->
+    <div class="row col hangdau-goiy" ng-show="find_select.price === 0">
+      <ul class="row col float-start">
+        <li
+          class="col-2 openTab-register"
+          style="height: fit-content"
+          ng-click="logMessage(sp)"
+          ng-repeat="sp in find|limitTo:12:begin_find"
+        >
+          <div class="card-hangdau-item" style="width: 18rem">
+            <span class="img-like text-center text-white bi bi-heart-fill">
+              {{sp.likecount}} Yêu thích</span
+            >
+            <span
+              class="img-banchay text-center text-white bi bi-fire"
+              ng-if="sp.sale"
+            >
+              Sản phẩm bán chạy</span
+            >
+
+            <img ng-src="images/{{sp.img}}" />
+
+            <div class="card-body">
+              <p class="card-text">{{sp.title}}</p>
+              <div class="price">
+                <span class="card-text icon-vnd">₫</span>
+                <span class="price-item">{{sp.price}}.000</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- giá giảm -->
+    <div class="row col hangdau-goiy" ng-show="find_select.price === 1">
+      <ul class="row col float-start">
+        <li
+          class="col-2 openTab-register"
+          style="height: fit-content"
+          ng-click="logMessage(sp)"
+          ng-repeat="sp in find|limitTo:12:begin_find| orderBy:'-price'"
+        >
+          <div class="card-hangdau-item" style="width: 18rem">
+            <span class="img-like text-center text-white bi bi-heart-fill">
+              {{sp.likecount}} Yêu thích</span
+            >
+            <span
+              class="img-banchay text-center text-white bi bi-fire"
+              ng-if="sp.sale"
+            >
+              Sản phẩm bán chạy</span
+            >
+
+            <img ng-src="images/{{sp.img}}" />
+
+            <div class="card-body">
+              <p class="card-text">{{sp.title}}</p>
+              <div class="price">
+                <span class="card-text icon-vnd">₫</span>
+                <span class="price-item">{{sp.price}}.000</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- giá tăng -->
+    <div class="row col hangdau-goiy" ng-show="find_select.price === 2">
+      <ul class="row col float-start">
+        <li
+          class="col-2 openTab-register"
+          style="height: fit-content"
+          ng-click="logMessage(sp)"
+          ng-repeat="sp in find|limitTo:12:begin_find| orderBy:'price'"
+        >
+          <div class="card-hangdau-item" style="width: 18rem">
+            <span class="img-like text-center text-white bi bi-heart-fill">
+              {{sp.likecount}} Yêu thích</span
+            >
+            <span
+              class="img-banchay text-center text-white bi bi-fire"
+              ng-if="sp.sale"
+            >
+              Sản phẩm bán chạy</span
+            >
+
+            <img ng-src="images/{{sp.img}}" />
+
+            <div class="card-body">
+              <p class="card-text">{{sp.title}}</p>
+              <div class="price">
+                <span class="card-text icon-vnd">₫</span>
+                <span class="price-item">{{sp.price}}.000</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <br />
+    <hr />
+  </div>
+ 
+</div>
+ 

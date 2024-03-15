@@ -1,0 +1,126 @@
+/* aside */
+
+aside {
+  margin-top: 70px !important;
+  background-color: #181a20;
+  position: relative;
+  margin-bottom: 0px;
+  padding-bottom: 450px;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+.bocthe {
+    height: 100%;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-54%);
+}
+aside h1 {
+  margin-top: 50px;
+}
+
+.email-input {
+  margin-top: 30px;
+}
+
+.form-email {
+  width: 400px !important;
+}
+.btn-next-container {
+  float: left;
+}
+
+.btn-next {
+  margin-top: 15px;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  transition: ease 0.5s;
+  padding-left: 0px !important;
+}
+.btn-next:hover {
+  scale: 1.05;
+  transition: ease 0.5s;
+}
+
+.checkbox-email {
+  margin-bottom: 20px !important;
+}
+.row-span {
+  text-align: center;
+}
+.btn-listbtn button {
+  width: 30% !important;
+  margin: 5px !important;
+  transition: ease 0.5s !important;
+}
+.btn-listbtn button:hover {
+  scale: 1.1 !important;
+  transition: ease 0.5s !important;
+  border-radius: 15px;
+}
+.input-group {
+    z-index: 1!important;
+    position: relative;
+}
+.input-group input{
+    z-index: 1!important;
+}
+.input-group a{
+    z-index: 2 !important;
+    position: absolute;
+    margin-left: 370px !important;
+    line-height: 40px;
+    background-color: none !important;
+    color: black !important;
+    text-decoration: none;
+    border: none !important;
+    cursor: pointer;
+}
+
+/* aside */
+
+/* article */
+article {
+  margin-top: 70px !important;
+}
+.article-contens {
+  padding-left: 100px;
+  text-align: center; /* Căn giữa nội dung theo chiều ngang */
+}
+
+.image-container {
+  padding-bottom: 15px;
+  display: inline-block; /* Hiển thị ảnh bên trong một khối inline */
+}
+/* setting ảnh bên phải */
+.image-container img {
+  padding-top: 40px;
+  display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+  margin: 0 auto; /* Căn giữa ảnh theo chiều ngang */
+  transition: ease 0.3s;
+}
+
+.span-taoTaiKhoan {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.span-taoTaiKhoan:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: ease 0.5s;
+}
+.none-feedback {
+  display: none;
+  float: left;
+  font-size: 13px;
+  color: red;
+}
+
+/* article */
+
